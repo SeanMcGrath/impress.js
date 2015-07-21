@@ -1,52 +1,10 @@
-/*
-    So you like the style of impress.js demo?
-    Or maybe you are just curious how it was done?
-
-    You couldn't find a better place to find out!
-
-    Welcome to the stylesheet impress.js demo presentation.
-
-    Please remember that it is not meant to be a part of impress.js and is
-    not required by impress.js.
-    I expect that anyone creating a presentation for impress.js would create
-    their own set of styles.
-
-    But feel free to read through it and learn how to get the most of what
-    impress.js provides.
-
-    And let me be your guide.
-
-    Shall we begin?
-*/
 
 
-/*
-    We start with a good ol' reset.
-    That's the one by Eric Meyer http://meyerweb.com/eric/tools/css/reset/
-
-    You can probably argue if it is needed here, or not, but for sure it
-    doesn't do any harm and gives us a fresh start.
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1);}
+    25% {-webkit-transform: scale(1.2);}
+    50% {-webkit-transform: scale(1.2);}
+    100% {-webkit-transform: scale(1);}
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -57,9 +15,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
+
 blockquote, q {
     quotes: none;
 }
@@ -82,16 +38,16 @@ table {
     want to leave anybody behind.
 */
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     min-height: 740px;
 
     background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#673AB7), to(#6C3DC1));
+    background: -webkit-radial-gradient(#673AB7, #6C3DC1);
+    background:    -moz-radial-gradient(#673AB7, #6C3DC1);
+    background:     -ms-radial-gradient(#673AB7, #6C3DC1);
+    background:      -o-radial-gradient(#673AB7, #6C3DC1);
+    background:         radial-gradient(#673AB7, #6C3DC1);
 }
 
 /*
@@ -122,6 +78,31 @@ a:hover,
 a:focus {
     background: rgba(255,255,255,1);
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+.step.hid:not(.present){
+    opacity: 0;
+}
+
+h1 {
+    font-size: 150px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 80px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 54px;
+    font-weight: 400;
+
+}
+
+img { 
+    width: 100%;
+    font-weight: 400;
 }
 
 /*
@@ -168,6 +149,7 @@ a:focus {
     width: 900px;
     padding: 40px;
     margin: 20px auto;
+    color: white;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -175,8 +157,9 @@ a:focus {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-family: 'PT Serif', georgia, serif;
+    font-family: 'Roboto', sans-serif;    
     font-size: 48px;
+    font-weight: 300;
     line-height: 1.5;
 }
 
@@ -196,6 +179,15 @@ a:focus {
     transition:         opacity 1s;
 }
 
+.well,
+.fa {
+    color: black;
+}
+
+.black.quick {
+    transition-duration: 0s !important;
+}
+
 .impress-enabled .step.active { opacity: 1 }
 
 /*
@@ -209,17 +201,12 @@ a:focus {
 .slide {
     display: block;
 
-    width: 900px;
-    height: 700px;
-    padding: 40px 60px;
-
     background-color: white;
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
-    color: rgb(102, 102, 102);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    color: black;
 
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 30px;
@@ -239,78 +226,128 @@ a:focus {
     white-space: nowrap;
 }
 
-/*
-    And now we start to style each step separately.
-
-    I agree that this may be not the most efficient, object-oriented and
-    scalable way of styling, but most of steps have quite a custom look
-    and typography tricks here and there, so they had to be styled separately.
-
-    First is the title step with a big <h1> (no room for padding) and some
-    3D positioning along Z axis.
-*/
-
-#title {
-    padding: 0;
+.slide li {
+    margin-bottom: .4em;
 }
 
-#title .try {
-    font-size: 64px;
+.slide h3 {
+    margin-bottom: .4em;
+}
+
+.strings {
     position: absolute;
-    top: -0.5em;
-    left: 1.5em;
-
-    -webkit-transform: translateZ(20px);
-    -moz-transform:    translateZ(20px);
-    -ms-transform:     translateZ(20px);
-    -o-transform:      translateZ(20px);
-    transform:         translateZ(20px);
+    top: 150px;
+    left: 75px;
 }
 
-#title h1 {
-    font-size: 190px;
-
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
+#built {
+    width: 1400px;
 }
 
-#title .footnote {
-    font-size: 32px;
+#built * {
+    transition: 1s;
 }
 
-/*
-    Second step is nothing special, just a text with a link, so it doesn't need
-    any special styling.
-
-    Let's move to 'big thoughts' with centered text and custom font sizes.
-*/
-#big {
-    width: 600px;
-    text-align: center;
-    font-size: 60px;
-    line-height: 1;
+#built .well {
+    margin-top: 4em;
 }
 
-#big b {
-    display: block;
-    font-size: 250px;
-    line-height: 250px;
+#built.present .improve-products {
+    animation: pulsate 2s ease-out;
+    animation-delay:         2s;
 }
 
-#big .thoughts {
-    font-size: 90px;
-    line-height: 150px;
+#built.present .save-time {
+    animation: pulsate 2s ease-out;
+    animation-delay:         4s;
 }
 
-/*
-    'Tiny ideas' just need some tiny styling.
-*/
-#tiny {
-    width: 500px;
-    text-align: center;
+#built.present .save-money {
+    animation: pulsate 2s ease-out;
+    animation-delay:         6s;
+    transition-delay: 6s;
+    color: #4CAF50;
+}
+
+.black.past {
+    opacity: 1 !important;
+}
+
+.black.future {
+    opacity: 0;
+}
+
+.black.black-first {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: opacity 7s !important;
+    background-color: black;
+    height: 5000px;
+    width: 5000px;
+}
+
+.black img {
+    display: flex;
+    height: 800px;
+    width: 800px;
+}
+
+.black.future img {
+    opacity: 0;
+    transition: opacity 7s;
+}
+
+.black.past img {
+    opacity: 1;
+}
+
+.black.present img {
+    opacity: 1;
+    transition: opacity 7s;
+}
+
+.black .I {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+    background-color: black;
+    opacity: 1;
+    line-height: 1em;
+    padding-left: 1000px;
+    margin-left: -700px;
+}
+
+#I18N {
+    width: 2000px;
+}
+
+#I18N .nter {
+    position: relative;
+    left: -1.85em;
+    z-index: -10;
+    display: inline-block;
+}
+
+#I18N.present .nter {
+    transform: translateX(-2000px);
+    transition-delay: 2s;
+    transition-duration: 2s;
+}
+
+#I18N .short {
+    display: inline-block;
+    position: relative;
+    left: -1000px;
+}
+
+#I18N.present .short {
+    display: inline-block;
+    position: relative;
+    transform: translateX(1000px);
+    transition-delay: 3s;
+    transition-duration: 2s;
 }
 
 /*
@@ -684,20 +721,3 @@ a:focus {
 */
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
-
-/*
-    There is one funny thing I just realized.
-
-    Thanks to this workaround above everything except #impress element is invisible
-    for click events. That means that the hint element is also not clickable.
-    So basically all of this transforms and delayed transitions trickery was probably
-    not needed at all...
-
-    But it was fun to learn about it, wasn't it?
-*/
-
-/*
-    That's all I have for you in this file.
-    Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
-    for you.
-*/
