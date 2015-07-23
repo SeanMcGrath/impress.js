@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
 
-<body class="impress-not-supported">
+<body class="impress-not-supported purple-bg">
 
 <!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
@@ -87,7 +87,7 @@
         <h2>Physics &amp; Computer Science</h2>
     </div>
 
-    <div class="step" data-x="0" data-y="500" >
+    <div class="step" id="umass" data-x="0" data-y="500" >
         <img src="img/umass.png"/>
     </div>
 
@@ -129,32 +129,111 @@
         <h1> Ready?</h1>
     </div>
 
-    <div class="step text-center hid black black-first" data-z="-3000" data-x="-1000" data-rotate-y="90">
-    </div>
-
-    <div class="step hid black" data-z="-3000" data-x="-1000" data-rotate-y="90">
+    <div id="black" class="step hid" data-z="-3000" data-x="-1000" data-rotate-y="90">
         <img src="img/earth.png" alt="earth">
     </div>
 
-    <div id="I18N" class="step black" data-z="-3000" data-x="-1000" data-y="1000" data-rotate-y="90">
+    <div id="I18N" class="step hid" data-z="-3000" data-x="-1000" data-y="1000" data-rotate-y="90">
         <h1><div class="I">I</div><span class="short">18N</span><span class="nter">nternationalization</span></h1>
     </div>
 
-    <div class="step black hid text-center" data-z="-3000" data-x="-1000" data-y="1250" data-rotate-y="90">
-        <h1>
-            <blockquote>The Process</blockquote>
-        </h1>
+    <div class="step hid" data-z="-3000" data-x="-1000" data-y="1350" data-rotate-y="90">
+        <blockquote>
+            The process of adapting computer software to different languages, regional differences and technical requirements of a target market.
+            <footer><cite>Wikipedia</cite></footer>
+        </blockquote>
+    </div>
+
+    <div class="step hid" data-z="-4500" data-x="-1000" data-y="1350" data-rotate-y="90">
+        <div class="col-md-10 col-md-offset-1 database"><h2>English</h2>
+            <h2 class="red">Spanish</h2>
+            <h2 class="orange">German</h2>
+            <h2 class="yellow">Italian</h2>
+            <h2 class="green">French</h2>
+            <h2 class="blue">Portuguese</h2>
+            <h2 class="purple">Chinese</h2>
+            <h2 class="gray">Japanese</h2>
+        </div>
+    </div>
+
+    <div class="step hid" data-z="-4500" data-x="-1000" data-y="1350" data-rotate-y="90">
+        <div class="col-md-10 col-md-offset-1 database database-visible"><h2>English</h2>
+            <h2 class="red">Spanish</h2>
+            <h2 class="orange">German</h2>
+            <h2 class="yellow">Italian</h2>
+            <h2 class="green">French</h2>
+            <h2 class="blue">Portuguese</h2>
+            <h2 class="purple">Chinese</h2>
+            <h2 class="gray">Japanese</h2>
+        </div>
+    </div>
+
+    <div class="step hid" id="devHarness" data-z="-6000" data-x="-1000" data-y="1350" data-rotate-y="90">
+        <img src="img/devHarness.png" id="harness">
+        <img src="img/outlook.png" id="outlook">
+    </div>
+
+    <div class="step future-hid" id="process" data-z="-6000" data-x="-2000" data-y="1350" data-rotate-y="90">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fa fa-user fa-4x"></i>
+                <div class="h1 future-hid" id="hello">"Hello"</div>
+            </div>
+            <div class="col-md-4">  
+                <img class="future-hid" src="img/devHarness.png" id="harness2">
+            </div>
+            <div class="col-md-4 text-center"><i class="fa fa-camera fa-4x future-hid"></i></div>
+        </div>
+        <div class="row white-icons">
+            <div class="col-md-4 text-center"><i class="fa fa-envelope fa-4x future-hid"></i></div>
+            <div class="col-md-4 text-center"><i class="fa fa-user fa-4x future-hid" id="first-user"></i></div>
+            <div class="col-md-4 text-center"><i class="fa fa-database fa-4x future-hid" id="first-db"></i></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fa fa-user fa-4x future-hid" id="second-user"></i>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-database fa-4x future-hid" id="second-db"></i>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-file-excel-o fa-4x future-hid"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="step future-hid flex-center" id="process-problems" data-z="-8200" data-x="-2000" data-y="1350" data-rotate-y="90" data-scale="4">
+        <div class="col-md-2 col-md-offset-2 flex-center">
+            <i class="fa fa-arrow-left fa-4x"></i>
+        </div>
+        <div class="col-md-9 text-center">
+            <h2>2-4 hours/week</h2>
+            <br>
+            <h2>$3,000+/week</h2>
+            <br>
+            <h2>Not Completely Effective</h2>
+        </div>
     </div>
 
 </div>
 
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script src="js/jquery.min.js"></script>
+<script>
+    $( function () {
+        impress().init();
+        window.addEventListener('impress:stepenter', function () {
+            var id = $('.active')[0].id;
+            if (id == 'black'){
+                $('body').addClass('black');
+            }
+            if (id == 'process-1'){
+                $('body').removeClass('black');
+                $('#umass').hide();
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
