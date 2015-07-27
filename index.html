@@ -4,27 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <title>Final Presentation - Sean McGrath</title>
     
     <meta name="description" content="Impress.js based Final Presentation for Lutron Internship 2015" />
     <meta name="author" content="Sean McGrath" />
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300italic,400italic,300,500italic' rel='stylesheet' type='text/css'>
-    <!--
-        
-        Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
-        presentation to work.
-        
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-        
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-        
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-        
-    -->
+    
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/presentation.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -34,38 +20,14 @@
 
 <body class="impress-not-supported purple-bg">
 
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
 <div class="fallback-message">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<!--
-    
-    Now that's the core element used by impress.js.
-    
-    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
-    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
-    
-    You probably won't need it now, but there are some configuration options that can be set on this element.
-    
-    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
-    a number of ms. It defaults to 1000 (1s).
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
-    https://developer.mozilla.org/en/CSS/perspective
-    
-    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
-    right around the corner of this tag ;)
-    
--->
 <div id="impress">
 
-    <div class="step hid text-center" data-x="-1000" data-y="-1500">
+    <div class="step hid text-center" id="welcome" data-x="-1000" data-y="-1500">
         <h1>Welcome</h1>
     </div>
 
@@ -133,18 +95,18 @@
         <img src="img/earth.png" alt="earth">
     </div>
 
-    <div id="I18N" class="step hid" data-z="-3000" data-x="-1000" data-y="1000" data-rotate-y="90">
+    <div id="I18N" class="step hid" data-z="-3000" data-x="-1000" data-y="1500" data-rotate-y="90">
         <h1><div class="I">I</div><span class="short">18N</span><span class="nter">nternationalization</span></h1>
     </div>
 
-    <div class="step hid" data-z="-3000" data-x="-1000" data-y="1350" data-rotate-y="90">
+    <div class="step hid" data-z="-3000" data-x="-1000" data-y="1850" data-rotate-y="90">
         <blockquote>
             The process of adapting computer software to different languages, regional differences and technical requirements of a target market.
             <footer><cite>Wikipedia</cite></footer>
         </blockquote>
     </div>
 
-    <div class="step hid" data-z="-4500" data-x="-1000" data-y="1350" data-rotate-y="90">
+    <div class="step hid" data-z="-4500" data-x="-1000" data-y="1850" data-rotate-y="90">
         <div class="col-md-10 col-md-offset-1 database"><h2>English</h2>
             <h2 class="red">Spanish</h2>
             <h2 class="orange">German</h2>
@@ -156,7 +118,7 @@
         </div>
     </div>
 
-    <div class="step hid" data-z="-4500" data-x="-1000" data-y="1350" data-rotate-y="90">
+    <div class="step hid" data-z="-4500" data-x="-1000" data-y="1850" data-rotate-y="90">
         <div class="col-md-10 col-md-offset-1 database database-visible"><h2>English</h2>
             <h2 class="red">Spanish</h2>
             <h2 class="orange">German</h2>
@@ -168,12 +130,16 @@
         </div>
     </div>
 
-    <div class="step hid" id="devHarness" data-z="-6000" data-x="-1000" data-y="1350" data-rotate-y="90">
+    <div class="step hid" id="devHarness" data-z="-6000" data-x="-1000" data-y="1850" data-rotate-y="90">
         <img src="img/devHarness.png" id="harness">
         <img src="img/outlook.png" id="outlook">
     </div>
 
-    <div class="step future-hid" id="process" data-z="-6000" data-x="-2000" data-y="1350" data-rotate-y="90">
+    <div class="step hid" data-z="-7500" data-x="-1000" data-y="1850" data-rotate-y="90">
+        <h1>Strings need to be <u>reveiwed.</u></h1>
+    </div>
+
+    <div class="step future-hid" id="process" data-z="-7500" data-x="-2000" data-y="1850" data-rotate-y="90">
         <div class="row">
             <div class="col-md-4 text-center">
                 <i class="fa fa-user fa-4x"></i>
@@ -202,7 +168,7 @@
         </div>
     </div>
 
-    <div class="step future-hid flex-center" id="process-problems" data-z="-8200" data-x="-2000" data-y="1350" data-rotate-y="90" data-scale="4">
+    <div class="step future-hid flex-center" id="process-problems" data-z="-9700" data-x="-2000" data-y="1850" data-rotate-y="90" data-scale="4">
         <div class="col-md-2 col-md-offset-2 flex-center">
             <i class="fa fa-arrow-left fa-4x"></i>
         </div>
@@ -215,6 +181,202 @@
         </div>
     </div>
 
+    <div class="step hid" id="solution" data-z="-9700" data-x="-5000" data-y="1850" data-rotate-y="180">
+        <h1>We need a better solution.</h1>
+    </div>
+
+    <div class="step hid text-center" data-z="-9700" data-x="-6500" data-y="1850" data-rotate-y="180">
+        <h1><i class="fa fa-microphone fa-3x"></i></h1><br>
+        <h1>Stakeholder Interviews</h1>
+    </div>
+
+    <div class="step future-hid text-center" id="stories" data-z="-9700" data-x="-8000" data-y="1850" data-rotate-y="180">
+
+        <div class="story-row" id="story-row-1">
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+        </div>
+
+        <div class="story-row" id="story-row-2">
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+        </div>
+
+        <div class="story-row" id="story-row-3">
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+        </div>
+        
+        <div class="story-row" id="story-row-4">
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+        </div>
+
+        <div class="story-row" id="story-row-5">
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+            <i class="fa fa-comment fa-3x"></i>
+            <i class="fa fa-comment fa-3x white"></i>
+        </div>
+
+    </div>
+
+    <div class="step future-hid flex-center" id="flowchart" data-z="-9700" data-x="-11000" data-y="1850" data-rotate-y="180" data-scale="3">
+        <img src="img/flowchart.png">
+    </div>
+
+    <div class="step hid flex-center" data-z="-9700" data-x="-11000" data-y="1850" data-rotate-y="180" data-rotate-x="180" data-scale="3">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-9850" data-y="2650" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/dashboard.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-10600" data-y="2650" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/add_string.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-11350" data-y="2650" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/find_string.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-12150" data-y="2650" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/edit_string.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-9850" data-y="1900" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/review_queue.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-10600" data-y="1900" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/review_string.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-11350" data-y="1900" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/change_reviewer.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-12150" data-y="1900" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/message_dev.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-9850" data-y="1150" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/get_strings.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-10600" data-y="1150" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/mark_strings.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-11350" data-y="1150" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/add_translated.png">
+    </div>
+
+    <div class="step spec-frame" data-z="-9690" data-x="-12150" data-y="1150" data-rotate-y="180" data-rotate-x="180" data-scale=".75" hidden >
+        <img src="img/get_resources.png">
+    </div>
+
+    <div class="step hid flex-center" data-z="-9700" data-x="-11000" data-y="1850" data-rotate-y="180" data-rotate-x="180" data-scale="3">
+    </div>
+
+    <div class="step hid" data-y="-6000">
+        <h1>How do we build it?</h1>
+    </div>
+
+    <div class="step well hid" data-y="-7000">
+        <h3>Requirements:</h3>
+        <ul>
+            <li>Easily Distributable &amp; Scalable</li>
+            <li>Single Point of DB Access</li>
+            <li>Maintainable</li>
+            <li>Integrable with Lutron Libraries</li>
+            <li>Intuitive, Responsive UI</li>
+        </ul>
+    </div>
+
+    <div class="step future-hid" id="acronyms" data-y="-7000" data-x="1500">
+        <h1>REST</h1>
+        <h3 class="well">Representational State Transfer</h3>
+        <br>
+        <h1 class="black">SPA</h1>
+        <h3 class="well">Single-Page Application</h3>
+    </div>
+
+    <div class="step future-hid text-center" id="web-api" data-y="-7320" data-x="1401" data-scale="0.05">
+        <h2 class="black">ASP.NET Web API 2</h2>
+    </div>
+
+    <div class="step" data-y="-7000" data-x="1500">
+    </div>
+
+    <div class="step future-hid text-center" data-y="-6865" data-x="1223" data-scale="0.03">
+        <h2>Backbone &amp; Bootstrap</h2>
+    </div>
+
+    <div class="step" data-y="-7000" data-x="1500">
+    </div>
+
+    <div class="step app-layer" id="data-layer" data-y="-8500" data-x="1500">
+        <div class="well">
+            <h2 class="text-center">Data Layer</h2>
+            
+        </div>
+    </div>
+
+    <div class="step app-layer" data-y="-8700" data-x="1500">
+        <div class="well">
+            <div style="z-index: 100;">
+                <h2 class="text-center">Data Access Layer</h2>
+            </div>
+        </div>
+        <h2 class="text-center"><i class="fa fa-arrow-up"></i></h2>
+    </div>
+
+    <div class="step app-layer" data-y="-8950" data-x="1500">
+        <div class="well"><h2 class="text-center">Web API Layer</h2></div>
+        <h2 class="text-center"><i class="fa fa-arrow-up"></i></h2>
+    </div>
+
+    <div class="step app-layer" data-y="-9200" data-x="1500">
+        <div class="well"><h2 class="text-center">User Interface Layer</h2></div>
+        <h2 class="text-center"><i class="fa fa-arrow-up"></i></h2>
+    </div>
+
+    <div class="step" data-y="-8900" data-x="1500" data-scale="1.2">
+    </div>
+
+    <div class="step future-hid" data-y="-8500" data-x="1900" data-z="10" data-scale="0.1">
+        <img src="img/schema.png">
+    </div>
+
+    <div class="step" data-y="-8900" data-x="1500" data-scale="1.2">
+    </div>
+
+    <div class="step future-hid wide" data-y="-8750" data-x="1050" data-z="10" data-scale="0.1">
+        <img src="img/class_diagram.png">
+    </div>
+
+    <div class="step" data-y="-8900" data-x="1500" data-scale="1.2">
+    </div>
+    
 </div>
 
 <script src="js/impress.js"></script>
@@ -224,13 +386,33 @@
         impress().init();
         window.addEventListener('impress:stepenter', function () {
             var id = $('.active')[0].id;
-            if (id == 'black'){
-                $('body').addClass('black');
+            if (id == 'welcome'){
+                $('.step:not(.present)').removeClass('past');
+                $('.step:not(.present)').addClass('future');
+                $('.spec-frame').hide();
             }
-            if (id == 'process-1'){
-                $('body').removeClass('black');
+            if (id == 'black'){
+                $('body').addClass('black-bg');
+            }
+            if (id == 'process'){
+                $('body').removeClass('black-bg');
                 $('#umass').hide();
             }
+            if (id == 'solution'){
+                $('.future-hid:not(#stories)').hide();
+            }
+            if (id == 'flowchart'){
+                $('#flowchart').show();
+                $('#stories').css({
+                    transform: 'translate(-50%, -50%) translate3d(-10000px, 1850px, -9700px) rotateY(180deg)'
+                });
+                setTimeout( function() { $('.spec-frame').show(); }, 1500 );
+            }
+            if (id == 'data-layer'){
+                $('.app-layer').show();
+            }
+        });
+        window.addEventListener('impress:stepleave', function () {
         });
     });
 </script>

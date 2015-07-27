@@ -60,6 +60,7 @@ a:focus {
 h1 {
     font-size: 150px;
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -76,6 +77,7 @@ h3 {
 img { 
     width: 100%;
     font-weight: 400;
+    background-color: transparent;
 }
 
 blockquote {
@@ -114,9 +116,22 @@ blockquote {
     color: #673AB7;
 }
 
+i.white {
+    color: white;
+}
+
 .black {
+    color: black;
+}
+
+.black-bg {
     transition: background-color 7s !important;
     background-color: black !important;
+}
+
+.gray-bg {
+    transition: background-color 3s !important;
+    background-color: #9E9E9E !important; 
 }
 
 .purple-gradient {
@@ -174,6 +189,10 @@ blockquote {
     line-height: 1.5;
 }
 
+.step.wide {
+    width: 1200px;
+}
+
 .step.hid:not(.present){
     opacity: 0;
 }
@@ -224,6 +243,11 @@ blockquote {
 .well,
 .fa {
     color: black;
+}
+
+u {
+    border-bottom: 8px dotted #F44336;
+    text-decoration: none;
 }
 
 .impress-enabled .step.active { opacity: 1 }
@@ -392,9 +416,9 @@ blockquote {
     -o-transform: translate(-50px, -50px);
     transform: translate(-50px, -50px);
 
-    -webkit-transition-delay:5s;
-    -o-transition-delay:5s;
-    transition-delay:5s;
+    -webkit-transition-delay: 8s;
+    -o-transition-delay: 8s;
+    transition-delay: 8s;
 
     transition-duration: 1s;
 }
@@ -413,9 +437,9 @@ blockquote {
     -o-transform: translate(-900px, -900px);
     transform: translate(-900px, -900px);
 
-    -webkit-transition-delay: 5s;
-    -o-transition-delay: 5s;
-    transition-delay: 5s;
+    -webkit-transition-delay:8s;
+    -o-transition-delay:8s;
+    transition-delay:8s;
 
     transition-duration: 2s;
 }
@@ -440,17 +464,17 @@ blockquote {
     -ms-transform: rotateZ(-80deg);
     -o-transform: rotateZ(-80deg);
     transform: rotateZ(-80deg);
-    transition-delay: 2s;
+    transition-delay: 4s;
 }
 
 #process.present #harness2 {
     width: 300px;
     display: inline-block;
-    transition-delay: 4s;
+    transition-delay: 8s;
 }
 
 #process .fa-camera {
-    transition-delay: 6s;
+    transition-delay: 12s;
 }
 
 #process .row {
@@ -462,43 +486,153 @@ blockquote {
     color: white;
 }
 #process .fa-envelope {
-    -webkit-transition-delay: 10s;
-    -o-transition-delay: 10s;
-    transition-delay: 10s;
+    -webkit-transition-delay: 16s;
+    -o-transition-delay: 16s;
+    transition-delay: 16s;
 }
 
 #process #first-user {
-    -webkit-transition-delay: 12s;
-    -o-transition-delay: 12s;
-    transition-delay: 12s;
-}
-
-#process #first-db {
-    -webkit-transition-delay: 14s;
-    -o-transition-delay: 14s;
-    transition-delay: 14s;
-}
-
-#process #second-user {
-    -webkit-transition-delay: 18s;
-    -o-transition-delay: 18s;
-    transition-delay: 18s;
-}
-
-#process #second-db {
     -webkit-transition-delay: 20s;
     -o-transition-delay: 20s;
     transition-delay: 20s;
 }
 
+#process #first-db {
+    -webkit-transition-delay: 24s;
+    -o-transition-delay: 24s;
+    transition-delay: 24s;
+}
+
+#process #second-user {
+    -webkit-transition-delay: 28s;
+    -o-transition-delay: 28s;
+    transition-delay: 28s;
+}
+
+#process #second-db {
+    -webkit-transition-delay: 32s;
+    -o-transition-delay: 32s;
+    transition-delay: 32s;
+}
+
 #process .fa-file-excel-o {
-    -webkit-transition-delay: 22s;
-    -o-transition-delay: 22s;
-    transition-delay: 22s;
+    -webkit-transition-delay: 36s;
+    -o-transition-delay: 36s;
+    transition-delay: 36s;
 }
 
 #process-problems {
     width: 1200px;
+}
+
+#stories {
+    width: 1200px;
+    height: 875px;
+    transition: transform 2s;
+}
+
+#stories i {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+#stories #story-row {
+    width: 100%;
+    position: absolute;    
+}
+
+#stories #story-row-1 {
+    position: absolute;
+    bottom: 700px;
+}
+
+#stories #story-row-2 {
+    position: absolute;
+    bottom: 525px;
+}
+
+#stories #story-row-3 {
+    position: absolute;
+    bottom: 350px;
+}
+
+#stories #story-row-4 {
+    position: absolute;
+    bottom: 175px;
+}
+
+#stories #story-row-5 {
+    position: absolute;
+    bottom: 0px;
+}
+
+#stories.present .story-row {
+    bottom: 350px !important;
+    transition-duration: 1s;
+    transition-delay: 4s;
+}
+
+#stories.past .story-row {
+    bottom: 350px !important;
+}
+
+#flowchart {
+    width: 1200px;
+    height: 900px;
+    background-color: white;
+}
+
+#flowchart:not(.present) img {
+    opacity: 0;
+    transition-duration: .75s;
+}
+
+#flowchart.present img {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 2s;
+}
+
+.step.spec-frame {
+    opacity: 1 !important;
+}
+
+#acronyms.future h3 {
+    opacity: 0;
+}
+
+#acronyms.present h3 {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 3s;
+}
+
+.app-layer {
+    opacity: 1 !important;
+}
+
+#web-api,
+.app-layer {
+    width: 1200px;
+}
+
+.app-layer .well {
+    margin-bottom: 0;
+    z-index: -10;
+}
+
+.app-layer h2 {
+    z-index: 10;
+    margin-top: 10px;
+}
+
+.app-layer.future h2 {
+    opacity: 0;
+}
+
+.app-layer:not(.future) h2 {
+    opacity: 1;
+    transition-duration: 1s;
 }
 
 .impress-enabled          { pointer-events: none }
