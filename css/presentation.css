@@ -193,6 +193,11 @@ i.white {
     width: 1200px;
 }
 
+.step.full {
+    width: 100vw;
+    height: 100vh;
+}
+
 .step.hid:not(.present){
     opacity: 0;
 }
@@ -485,6 +490,7 @@ u {
 .white-icons i {
     color: white;
 }
+
 #process .fa-envelope {
     -webkit-transition-delay: 16s;
     -o-transition-delay: 16s;
@@ -633,6 +639,21 @@ u {
 .app-layer:not(.future) h2 {
     opacity: 1;
     transition-duration: 1s;
+}
+
+#deploy.present .fa-windows {
+    animation: pulsate 2s ease-out;
+    animation-delay:         6s;
+}
+
+#deploy.present .fa-database {
+    animation: pulsate 2s ease-out;
+    animation-delay:         12s;
+}
+
+#deploy.present .fa-code {
+    animation: pulsate 2s ease-out;
+    animation-delay:         18s;
 }
 
 .impress-enabled          { pointer-events: none }
