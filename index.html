@@ -173,7 +173,7 @@
             <i class="fa fa-arrow-left fa-4x"></i>
         </div>
         <div class="col-md-9 text-center">
-            <h2>2-4 hours/week</h2>
+            <h2>2 hours/week</h2>
             <br>
             <h2>$3,000+/week</h2>
             <br>
@@ -373,8 +373,15 @@
     <div class="step" data-y="-8900" data-x="1500" data-scale="1.2">
     </div>
 
-    <div class="step future-hid wide" data-y="-8750" data-x="1050" data-z="10" data-scale="0.1">
+    <div class="step hid wide" data-y="-8750" data-x="1050" data-z="10" data-scale="0.1">
         <img src="img/class_diagram.png">
+    </div>
+
+    <div class="step" data-y="-8900" data-x="1500" data-scale="1.2">
+    </div>
+
+    <div class="step hid wide" data-y="-9010" data-x="1900" data-z="10" data-scale="0.1">
+        <img src="img/controller_diagram.png">
     </div>
 
     <div class="step" data-y="-8900" data-x="1500" data-scale="1.2">
@@ -418,10 +425,11 @@
         </h1>
     </div>
 
-    <div class="step hid well" data-y="-5000" data-z="500" data-rotate="369">
+    <div class="step hid well" data-y="-5000" data-z="500" data-rotate="360">
         <h3>What's Left:</h3>
         <ul>
             <li>Finish Deploying</li>
+            <li>Logging</li>
             <li>Refactor &amp; Polish</li>
             <li>Document</li>
             <li>Write Tests</li>
@@ -449,9 +457,6 @@
                 $('body').removeClass('black-bg');
                 $('#umass').hide();
             }
-            if (id == 'solution'){
-                $('#process, #process-problems').hide();
-            }
             if (id == 'flowchart'){
                 $('#flowchart').show();
                 $('#stories').css({
@@ -461,9 +466,6 @@
             }
             if (id == 'data-layer'){
                 $('.app-layer:not(.img)').show();
-            }
-            if (id == 'testing') {
-                $('.app-layer').hide(500);
             }
         });
         window.addEventListener('impress:stepleave', function () {

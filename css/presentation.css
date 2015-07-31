@@ -12,6 +12,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
+html {
+    cursor: none;
+}
 body {
     line-height: 1;
 }
@@ -421,9 +425,9 @@ u {
     -o-transform: translate(-50px, -50px);
     transform: translate(-50px, -50px);
 
-    -webkit-transition-delay: 8s;
-    -o-transition-delay: 8s;
-    transition-delay: 8s;
+    -webkit-transition-delay: 16s;
+    -o-transition-delay: 16s;
+    transition-delay: 16s;
 
     transition-duration: 1s;
 }
@@ -442,9 +446,9 @@ u {
     -o-transform: translate(-900px, -900px);
     transform: translate(-900px, -900px);
 
-    -webkit-transition-delay:8s;
-    -o-transition-delay:8s;
-    transition-delay:8s;
+    -webkit-transition-delay:16s;
+    -o-transition-delay:16s;
+    transition-delay:16s;
 
     transition-duration: 2s;
 }
@@ -469,6 +473,8 @@ u {
     -ms-transform: rotateZ(-80deg);
     -o-transform: rotateZ(-80deg);
     transform: rotateZ(-80deg);
+    -webkit-transition-delay: 4s;
+    -o-transition-delay: 4s;
     transition-delay: 4s;
 }
 
